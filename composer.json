@@ -4,8 +4,15 @@
     "type": "shopware-platform-plugin",
     "version": "1.0.0",
     "license": "MIT",
-    "homepage": "",
-    "authors": ["Fabian Dingemans"],
+    "homepage": "https://github.com/faab007nl/ConnectGuestsOnAccountCreation",
+    "authors": [
+        {
+            "name": "Fabiandingemans",
+            "email": "mail@fabiandingemans.nl",
+            "homepage": "https://fabiandingemans.nl",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "shopware/core": "6.5.*"
     },
