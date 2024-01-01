@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+
+        <service id="connect_guests_on_account_creation.order_mover" class="ConnectGuestsOnAccountCreation\Service\ConnectGuestsOrderMover">
+            <argument type="service" id="order_customer.repository" />
+        </service>
+        <service id="ConnectGuestsOnAccountCreation\Subscriber\OnCustomerCreation">
+            <argument type="service" id="customer.repository" />
+            <argument type="service" id="connect_guests_on_account_creation.order_mover" />
+            <tag name="kernel.event_subscriber"/>
+        </service>
+
+    </services>
+</container>
